@@ -37,23 +37,34 @@
 
 // Problem 3: Is Less or Greater than seven
 
-function isLGSeven(givenInput) {
-  const subtractionOf7 = givenInput - 7;
+// function isLGSeven(givenInput) {
+//   const subtractionOf7 = givenInput - 7;
 
-  if (subtractionOf7 < 7) {
-    return subtractionOf7;
-  } else {
-    const result = givenInput * 2;
-    return result;
-  }
-}
+//   if (subtractionOf7 < 7) {
+//     return subtractionOf7;
+//   } else {
+//     const result = givenInput * 2;
+//     return result;
+//   }
+// }
 
-const input = 6;
-if (typeof input === "number") {
+// const input = 6;
+// if (typeof input === "number") {
+//   console.log("Thanks!");
+// } else {
+//   console.log("Please input a number");
+// }
+
+// const result = isLGSeven(input);
+// // console.log(result);
+
+// Problem 4: Finding Bad data
+
+function findingBadData(givenArray) {}
+
+const inputArray = [1, 2];
+if (Array.isArray(inputArray) === "true") {
   console.log("Thanks!");
 } else {
   console.log("Please input a number");
 }
-
-const result = isLGSeven(input);
-// console.log(result);
