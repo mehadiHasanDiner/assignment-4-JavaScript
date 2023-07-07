@@ -60,11 +60,31 @@
 
 // Problem 4: Finding Bad data
 
-function findingBadData(givenArray) {}
+function findingBadData(givenArray) {
+  let badData = [];
+  for (i = 0; i <= givenArray.length; i++) {
+    const findData = givenArray[i];
+    if (givenArray[i] < 0) {
+      badData.push(findData);
+    }
+  }
+  return badData;
+}
 
-const inputArray = [1, 2];
+function totalOfData(badData) {
+  const data = badData.length;
+  if (data >= 0) {
+    return data + " Bad Data";
+  }
+}
+
+const inputArray = [-4, -9, -5, -33, -55];
 if (Array.isArray(inputArray) === true) {
   console.log("Thanks!");
 } else {
   console.log("Please input an array");
 }
+
+const checkBadData = findingBadData(inputArray);
+const totalBadData = totalOfData(checkBadData);
+// console.log(totalBadData);
