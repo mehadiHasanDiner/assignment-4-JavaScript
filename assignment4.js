@@ -58,33 +58,61 @@
 // const result = isLGSeven(input);
 // // console.log(result);
 
-// Problem 4: Finding Bad data
+// // Problem 4: Finding Bad data
+// function findingBadData(givenArray) {
+//   let badData = [];
+//   for (i = 0; i <= givenArray.length; i++) {
+//     const findData = givenArray[i];
+//     if (givenArray[i] < 0) {
+//       badData.push(findData);
+//     }
+//   }
+//   return badData;
+// }
 
-function findingBadData(givenArray) {
-  let badData = [];
-  for (i = 0; i <= givenArray.length; i++) {
-    const findData = givenArray[i];
-    if (givenArray[i] < 0) {
-      badData.push(findData);
-    }
+// function totalOfData(badData) {
+//   const data = badData.length;
+//   if (data >= 0) {
+//     return data + " Bad Data";
+//   }
+// }
+
+// const inputArray = [-4, -9, -5, -33, -55];
+// if (Array.isArray(inputArray) === true) {
+//   console.log("Thanks!");
+// } else {
+//   console.log("Please input an array");
+// }
+
+// const checkBadData = findingBadData(inputArray);
+// const totalBadData = totalOfData(checkBadData);
+// // console.log(totalBadData);
+
+// Problem 5: Convert your gems into diamond
+
+function gemsToDiamond(friend1Given, friend2Given, friend3Given) {
+  const gemPowOfFriend1 = 21;
+  const gemPowOfFriend2 = 32;
+  const gemPowOfFriend3 = 43;
+
+  const friend1Gem = gemPowOfFriend1 * friend1Given;
+  const friend2Gem = gemPowOfFriend2 * friend2Given;
+  const friend3Gem = gemPowOfFriend3 * friend3Given;
+
+  const friendsTotalGem = friend1Gem + friend2Gem + friend3Gem;
+  if (friendsTotalGem > 1000 * 2) {
+    const covertDiamond = friendsTotalGem - 2000;
+    return covertDiamond;
+  } else {
+    return friendsTotalGem;
   }
-  return badData;
+}
+const friend1 = 20;
+const friend2 = 200;
+const friend3 = 50;
+if ((typeof friend1, friend2, friend3 !== "number")) {
+  console.log("Please input a number parameter");
 }
 
-function totalOfData(badData) {
-  const data = badData.length;
-  if (data >= 0) {
-    return data + " Bad Data";
-  }
-}
-
-const inputArray = [-4, -9, -5, -33, -55];
-if (Array.isArray(inputArray) === true) {
-  console.log("Thanks!");
-} else {
-  console.log("Please input an array");
-}
-
-const checkBadData = findingBadData(inputArray);
-const totalBadData = totalOfData(checkBadData);
-// console.log(totalBadData);
+const friendGem = gemsToDiamond(friend1, friend2, friend3);
+console.log(friendGem);
