@@ -63,8 +63,8 @@
 function findingBadData(givenArray) {}
 
 const inputArray = [1, 2];
-if (Array.isArray(inputArray) === "true") {
+if (Array.isArray(inputArray) === true) {
   console.log("Thanks!");
 } else {
-  console.log("Please input a number");
+  console.log("Please input an array");
 }
